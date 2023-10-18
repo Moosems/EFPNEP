@@ -111,7 +111,6 @@ Here are some examples of the system in practice:
           246420
         ```
 6. Division:
-    - TODO: Give example of elementary division of large numbers and an example of small numbers with one of these cases containing a repeating outcome (10/3 = 3.33)
     - Small numbers:
         ```
           .2
@@ -143,6 +142,15 @@ Here are some examples of the system in practice:
         
         Binary return would be `00011 11111 00011 00011 101010 0000000 00000111`
         ```
+
+## Benefits
+This protocol has one major benefit:
+1. The protocol is far more precise as it doesn't use true floating point numbers but rather handles the numbers similar to strings and performs operations as one would in grade school. Not only this, but when there are repeating decimals, the protocol is also able to handle them and maintain precision. 
+
+## Drawbacks
+This protocol has two major drawbacks:
+1. The protocol is memory inneficient. The protocol uses 5 bits to represent each character and by treating numbers like a string, the protocol is not memory efficient. This is especially true when dealing with large numbers.
+2. The protocol is slow. This is because it has to deal with the number like a string and has to perform operations on each character.
 
 ## Conclusion
 The protocol ensures precise encoding and decoding while minimizing wasted bits by optimizing bit usage. This is achieved by aligning decimal points and adjusting padding bits as needed. The protocol can be used to perform basic arithmetic operations, adhering to the encoding rules and ensuring consistency and accuracy in mathematical operations.
